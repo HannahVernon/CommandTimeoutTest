@@ -11,7 +11,7 @@ namespace ConnectionTimeoutTest
             {
                 InitialCatalog = "tempdb",
                 IntegratedSecurity = true,
-                DataSource = "Words"
+                DataSource = "localhost"
             };
 
             using SqlConnection connection = new SqlConnection();
