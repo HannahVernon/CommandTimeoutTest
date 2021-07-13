@@ -1,12 +1,19 @@
 ﻿using System;
 using System.Data.SqlClient;
 
-namespace ConnectionTimeoutTest
+namespace CommandTimeoutTest
 {
     class Program
     {
         static void Main(string[] args)
         {
+            string serverName;
+
+            if (args.Length > 0)
+            {
+                serverName = args[0];
+            }
+
             SqlConnectionStringBuilder sqlConnectionStringBuilder = new System.Data.SqlClient.SqlConnectionStringBuilder
             {
                 InitialCatalog = "tempdb",
